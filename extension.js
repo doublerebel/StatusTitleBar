@@ -447,14 +447,7 @@ const AppMenuButton = new Lang.Class({
  	},
  
  	_changeTitle: function(win, app) {
- 		this._label.setText("");
- 		let maximizedFlags = Meta.MaximizeFlags.HORIZONTAL | Meta.MaximizeFlags.VERTICAL;
- 
- 		if (win.get_maximized() == maximizedFlags) {
- 			this._label.setText(win.title);
- 		} else {
- 			this._label.setText(app.get_name());
- 		}
+		this._label.setText(win.title);
  	},
  
  	_onMaximize: function(shellwm, actor) {
